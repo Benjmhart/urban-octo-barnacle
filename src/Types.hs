@@ -65,8 +65,8 @@ mkPiece a =
                          . (XCoord *** YCoord)
                          )
 
-lBlock :: Tetris (Maybe Block)
-lBlock =
+lPeice :: Tetris (Maybe Block)
+lPeice =
   mkPiece Green
     [ (0, 0)
     , (1, 0)

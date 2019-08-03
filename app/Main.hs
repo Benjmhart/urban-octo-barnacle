@@ -1,7 +1,7 @@
 module Main (main) where
 
-import UrbanOctoBarnacle (someFunc)
+import UrbanOctoBarnacle (renderMain)
 
 
 main :: IO ()
-main = someFunc
+main = renderMain
