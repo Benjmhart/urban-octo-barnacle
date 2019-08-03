@@ -19,7 +19,7 @@ library
   exposed-modules:     UrbanOctoBarnacle
                        Prelude
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , base-prelude
 
   ghc-options:         -Wall
@@ -38,7 +38,7 @@ executable urban-octo-barnacle
   hs-source-dirs:      app
   main-is:             Main.hs
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , urban-octo-barnacle
                      , base-prelude
 
@@ -62,7 +62,7 @@ test-suite urban-octo-barnacle-test
   hs-source-dirs:      test
   main-is:             Spec.hs
 
-  build-depends:       base-noprelude ^>= 4.11.1.0
+  build-depends:       base-noprelude ^>= 4.12.0.0
                      , urban-octo-barnacle
                      , base-prelude
 
