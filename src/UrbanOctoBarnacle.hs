@@ -3,7 +3,7 @@ module UrbanOctoBarnacle where
 import Graphics.Gloss
 import Types
 
--- $> putStrLn $ showTetris lPeice
+
 -- Rendering a square 
 renderMain :: IO ()
 renderMain = display (InWindow "Nice Window" (640, 480) (50, 50)) white $ renderTetris lPeice
@@ -21,9 +21,10 @@ renderTetris t = Pictures $ do
   pure $ translate (scaleBlock x) (negate $ scaleBlock y) $ 
     fromMaybe mempty $ renderBlock <$> runTetris t (XCoord x) (YCoord y)
 
-
-
 renderBlock :: Block -> Picture
-renderBlock Red   = color red   $ rectangleSolid 30 30
-renderBlock Green = color green $ rectangleSolid 30 30
-renderBlock Blue  = color blue  $ rectangleSolid 30 30
+renderBlock = flip color (rectangleSolid 30 30) . blockToColor
+
+blockToColor:: Block -> Color 
+blockToColor Red   = red
+blockToColor Green = green 
+blockToColor Blue  = blue
