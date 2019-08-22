@@ -15,5 +15,5 @@ goUp :: Tetris a -> Tetris a
 goUp = peeks $ second (<> YCoord (-1))
 
 runGravity :: Tetris a -> Tetris a
-runGravity = extend $ extract . goUp 
+runGravity = extend . const $ extract . goUp 
 
